@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            myRigidBody.velocity = new Vector3(0, 1, 1);
+            myRigidBody.velocity = new Vector3(0, 1, 3);
         }
 
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
