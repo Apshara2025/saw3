@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
@@ -21,6 +22,8 @@ public class CollisionHandler : MonoBehaviour
     /// <param name="other">The Collision data associated with this collision.</param>
     private void OnCollisionEnter(Collision other)
     {
-        SceneManager.LoadScene(0);
+        SkinnedMeshRenderer mySkinnedMeshRenderer = FindFirstObjectByType<SkinnedMeshRenderer>();
+        mySkinnedMeshRenderer.material.color = Color.red;
+        //SceneManager.LoadScene(0);
     }
 }
